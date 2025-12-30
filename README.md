@@ -1,2 +1,2 @@
-# transparent-portfolio
-HTML CSS PORTPHOLIO FOR FREASHERS 
+# jahid-ekbal-mallick
+This is my portpholio website
