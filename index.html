@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jahid Ekbal - Full-Stack Developer & Digital Creator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,50 Q300,100 600,50 T1200,50 L1200,120 L0,120 Z" fill="rgba(255,255,255,0.1)"></path></svg>');
+            background-size: cover;
+            animation: wave 8s linear infinite;
+        }
+
+        @keyframes wave {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(1200px); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .name {
+            font-size: 2.8em;
+            font-weight: 800;
+            margin-bottom: 8px;
+            animation: slideInLeft 1s ease-out;
+            letter-spacing: -1px;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 300;
+            opacity: 0.95;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .social-link:hover {
+            background: white;
+            color: #667eea;
+            transform: rotateY(360deg) translateY(-5px);
+            border-color: white;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+        .section:nth-child(5) { animation-delay: 0.5s; }
+
+        .section-title {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .section-title::after {
+            content: '';
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            flex-grow: 1;
+            border-radius: 2px;
+        }
+
+        /* About Me Section */
+        .about-text {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            border-radius: 12px;
+            line-height: 1.8;
+            font-size: 0.95em;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .about-text:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+        }
+
+        .skill-category h3 {
+            font-size: 1.2em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .skill-tag:hover {
+            background: white;
+            color: #667eea;
+            transform: scale(1.05);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: #667eea;
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
+        }
+
+        .project-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .project-desc {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .tech-badge {
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-left: 3px solid #667eea;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 13px;
+            height: 13px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+
+        .timeline-item:last-child {
+            border-left: 3px solid transparent;
+            padding-bottom: 0;
+        }
+
+        .timeline-title {
+            font-weight: 700;
+            color: #333;
+            font-size: 1.05em;
+            margin-bottom: 4px;
+        }
+
+        .timeline-subtitle {
+            color: #667eea;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .timeline-desc {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .stat {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat:hover {
+            transform: scale(1.05);
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.85em;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f5f7fa;
+            padding: 20px 40px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .social-link:hover {
+                transform: none;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { border-radius: 12px; }
+            .name { font-size: 1.8em; }
+            .tagline { font-size: 1em; }
+            .contact-info { gap: 12px; }
+            .section { margin-bottom: 25px; }
+            .skills-container { grid-template-columns: 1fr; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <div class="name">🚀 JAHID EKBAL MALLICK</div>
+                <div class="tagline">💻 Full-Stack Developer & 🎨 Digital Creator</div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">📧 jahidekbalmallick@gmail.com</div>
+                    <div class="contact-item">📱 +91 9733696362</div>
+                    <div class="contact-item">📍 Kolkata, West Bengal, India</div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/jahid-developer" class="social-link" title="LinkedIn">💼</a>
+                    <a href="https://github.com/jahid-ekbal" class="social-link" title="GitHub">⚙️</a>
+                    <a href="https://www.behance.net/jahidemallick" class="social-link" title="Behance">🎨</a>
+                    <a href="https://x.com/JAHIDEKBAL01" class="social-link" title="Twitter">𝕏</a>
+                    <a href="https://www.youtube.com/@guru-esports" class="social-link" title="YouTube">📺</a>
+                    <a href="https://codepen.io/jahidekbalmallick-jahidekbalmallick-" class="social-link" title="CodePen">🖊️</a>
+                    <a href="https://discord.gg/YUMJdPtBDR" class="social-link" title="Discord">🎮</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- About Me -->
+            <div class="section">
+                <div class="section-title">💫 About Me</div>
+                <div class="about-text">
+                    I craft digital experiences that merge technical precision with visual innovation. As a versatile developer and designer, I bridge the gap between functionality and aesthetics to build engaging web solutions. My workflow combines clean, maintainable code with compelling visuals – ensuring every project achieves both technical excellence and visual impact. Whether building complex web applications or crafting social media content, I solve digital challenges with creativity and precision.
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="section">
+                <div class="section-title">📊 Quick Stats</div>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Skills Mastered</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Dedication</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Available</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="section">
+                <div class="section-title">🛠️ Technical Skills</div>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>🖥️ Frontend Development</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript ES6+</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>🎨 Design & Creative</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Photoshop</span>
+                            <span class="skill-tag">Premiere Pro</span>
+                            <span class="skill-tag">Blender 3D</span>
+                            <span class="skill-tag">UI/UX</span>
+                            <span class="skill-tag">Video Editing</span>
+                            <span class="skill-tag">Graphic Design</span>
+                            <span class="skill-tag">Animation</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>📱 Digital Content</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Social Media</span>
+                            <span class="skill-tag">YouTube Content</span>
+                            <span class="skill-tag">Thumbnails</span>
+                            <span class="skill-tag">Advertising</span>
+                            <span class="skill-tag">Content Creation</span>
+                            <span class="skill-tag">SEO</span>
+                            <span class="skill-tag">Web Design</span>
+                            <span class="skill-tag">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Projects -->
+            <div class="section">
+                <div class="section-title">🚀 Featured Projects</div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-title">💼 Ekbal Studio</div>
+                        <div class="project-desc">Professional portfolio & e-commerce platform showcasing web development and digital design work with modern UI/UX.</div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Tailwind</span>
+                            <span class="tech-badge">Netlify</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-title">🎮 VNS Anon Team</div>
+                        <div class="project-desc">eSports gaming community website and content hub with tournament tracking and community engagement features.</div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-title">🎬 Guru eSports</div>
+                        <div class="project-desc">YouTube channel presence with custom thumbnails, video editing, and digital content strategy for gaming audience.</div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Premiere Pro</span>
+                            <span class="tech-badge">Photoshop</span>
+                            <span class="tech-badge">YouTube</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education & Experience -->
+            <div class="section">
+                <div class="section-title">🎓 Education & Experience</div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-title">🏫 Polytechnic Education</div>
+                        <div class="timeline-subtitle">Computer Science & Technology (CST)</div>
+                        <div class="timeline-desc">First-year polytechnic student pursuing comprehensive knowledge in web development, system administration, and digital technologies.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">💡 Self-Taught Developer</div>
+                        <div class="timeline-subtitle">Continuous Learning & Skill Development</div>
+                        <div class="timeline-desc">Mastered modern web technologies through hands-on projects, online courses, and practical implementation in real-world applications.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">🎨 Creative Designer</div>
+                        <div class="timeline-subtitle">UI/UX & Digital Content Specialist</div>
+                        <div class="timeline-desc">Advanced proficiency in Figma, Adobe Creative Suite, and 3D design with expertise in creating pixel-perfect interfaces and engaging visual content.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Achievements -->
+            <div class="section">
+                <div class="section-title">⭐ Key Achievements</div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-title">🏆 Multiple Project Completions</div>
+                        <div class="timeline-desc">Successfully delivered 50+ projects ranging from responsive websites to interactive web applications with 100% client satisfaction.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">🌐 Strong Digital Presence</div>
+                        <div class="timeline-desc">Established professional portfolio across GitHub, LinkedIn, Behance, and social platforms showcasing diverse skill set and creative work.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">🎯 eSports Community Leadership</div>
+                        <div class="timeline-desc">Active involvement in VNS Anon Team and Guru eSports community with content creation and technical management responsibilities.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">📱 Responsive Design Excellence</div>
+                        <div class="timeline-desc">Specialized in creating mobile-first, ATS-optimized designs that maintain visual appeal across all devices and screen sizes.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="section" style="text-align: center; background: linear-gradient(135deg, #667eea15, #764ba215); padding: 25px; border-radius: 12px;">
+                <h3 style="color: #667eea; margin-bottom: 10px;">🤝 Let's Collaborate!</h3>
+                <p style="color: #666; margin-bottom: 15px;">Always open to exciting projects and creative partnerships. Let's build something amazing together!</p>
+                <p style="font-size: 0.9em; color: #999;">📧 jahidekbalmallick@gmail.com | 📱 +91 9733696362</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>💼 © 2025 Jahid Ekbal Mallick | Full-Stack Developer & Digital Creator | Kolkata, India</p>
+            <p>🔗 <a href="https://github.com/jahid-ekbal" style="color: #667eea; text-decoration: none;">GitHub</a> • <a href="https://www.linkedin.com/in/jahid-developer" style="color: #667eea; text-decoration: none;">LinkedIn</a> • <a href="https://www.behance.net/jahidemallick" style="color: #667eea; text-decoration: none;">Behance</a> • <a href="https://ekbal-studio.netlify.app" style="color: #667eea; text-decoration: none;">Portfolio</a></p>
+        </div>
+    </div>
+</body>
+</html>
