@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact - Jahid Ekbal Mallick">
+  <meta property="og:title" content="Contact - Jahid Ekbal Mallick">
+  <meta name="theme-color" content="#020812">
+  <title>Contact — Jahid Ekbal Mallick</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="glass-nav">
+    <div class="nav-container">
+      <div class="nav-logo"> </> JAHID</div>
+      <div class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </div>
+      <div class="nav-right">
+        <div class="github-stats">
+          <a href="https://github.com/jahid-ekbal" target="_blank" class="github-link">
+            <i data-lucide="github" class="github-icon"></i>
+            <span class="follower-count" id="follower-count">--</span>
+          </a>
+        </div>
+        <div class="theme-toggle">
+          <button id="theme-switch" class="theme-switch-button" aria-label="Toggle theme">
+            <i data-lucide="moon" stroke-width="2.5"></i>
+          </button>
+        </div>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>// GET IN TOUCH</h2>
+        <div class="contact-content">
+          <div class="contact-info glass">
+            <div class="email-block"><h3>Personal</h3><p class="email" data-email="jahidekbalmallick@gmail.com">jahidekbalmallick@gmail.com</p></div>
+            <div class="email-block"><h3>Business</h3><p class="email" data-email="jahidekbal.io@gmail.com">jahidekbal.io@gmail.com</p></div>
+            <div class="social-links">
+              <a href="https://github.com/jahid-ekbal" target="_blank" title="GitHub"><i data-lucide="github"></i></a>
+              <a href="https://linkedin.com/in/jahid-developer" target="_blank" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+              <a href="https://twitter.com/jahidekbal01" target="_blank" title="Twitter"><i data-lucide="twitter"></i></a>
+              <a href="https://www.youtube.com/@teamregix" target="_blank" title="YouTube"><i data-lucide="youtube"></i></a>
+              <a href="https://discord.gg/f8dcB5nDyh" target="_blank" title="Discord"><i data-lucide="message-circle"></i></a>
+              <a href="https://instagram.com/jahid.developer" target="_blank" title="Instagram"><i data-lucide="instagram"></i></a>
+            </div>
+          </div>
+          <form class="contact-form glass" id="contactForm">
+            <div class="form-group"><input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" required></div>
+            <div class="form-group"><input type="email" id="email" name="email" placeholder="Your Email" autocomplete="email" required></div>
+            <div class="form-group"><textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea></div>
+            <button type="submit" class="btn btn-solid">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <div class="bottom-nav-container">
+      <a href="index.html" class="bottom-nav-item" aria-label="Home"><i data-lucide="home" class="bottom-nav-icon"></i><span class="bottom-nav-label">Home</span></a>
+      <a href="about.html" class="bottom-nav-item" aria-label="About"><i data-lucide="user" class="bottom-nav-icon"></i><span class="bottom-nav-label">About</span></a>
+      <a href="skills.html" class="bottom-nav-item" aria-label="Skills"><i data-lucide="code" class="bottom-nav-icon"></i><span class="bottom-nav-label">Skills</span></a>
+      <a href="projects.html" class="bottom-nav-item" aria-label="Projects"><i data-lucide="folder" class="bottom-nav-icon"></i><span class="bottom-nav-label">Projects</span></a>
+      <a href="contact.html" class="bottom-nav-item active" aria-label="Contact"><i data-lucide="mail" class="bottom-nav-icon"></i><span class="bottom-nav-label">Contact</span></a>
+    </div>
+  </nav>
+
+  <footer class="footer"><div class="container"><p>© 2025 Jahid Ekbal Mallick — Built with ❤️ & ☕</p></div></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/lucide.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
