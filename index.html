@@ -3,672 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jahid Ekbal - Full-Stack Developer & Digital Creator</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&display=swap');
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            animation: slideInUp 0.8s ease-out;
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Header Section */
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,50 Q300,100 600,50 T1200,50 L1200,120 L0,120 Z" fill="rgba(255,255,255,0.1)"></path></svg>');
-            background-size: cover;
-            animation: wave 8s linear infinite;
-        }
-
-        @keyframes wave {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(1200px); }
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .name {
-            font-size: 2.8em;
-            font-weight: 800;
-            margin-bottom: 8px;
-            animation: slideInLeft 1s ease-out;
-            letter-spacing: -1px;
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .tagline {
-            font-size: 1.3em;
-            margin-bottom: 20px;
-            font-weight: 300;
-            opacity: 0.95;
-            animation: fadeIn 1.2s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            font-size: 0.95em;
-            margin-bottom: 15px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 12px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .social-link:hover {
-            background: white;
-            color: #667eea;
-            transform: rotateY(360deg) translateY(-5px);
-            border-color: white;
-        }
-
-        /* Main Content */
-        .content {
-            padding: 40px;
-        }
-
-        .section {
-            margin-bottom: 35px;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .section:nth-child(1) { animation-delay: 0.1s; }
-        .section:nth-child(2) { animation-delay: 0.2s; }
-        .section:nth-child(3) { animation-delay: 0.3s; }
-        .section:nth-child(4) { animation-delay: 0.4s; }
-        .section:nth-child(5) { animation-delay: 0.5s; }
-
-        .section-title {
-            font-size: 1.6em;
-            font-weight: 700;
-            color: #667eea;
-            margin-bottom: 18px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            position: relative;
-            padding-bottom: 12px;
-        }
-
-        .section-title::after {
-            content: '';
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            flex-grow: 1;
-            border-radius: 2px;
-        }
-
-        /* About Me Section */
-        .about-text {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 20px;
-            border-radius: 12px;
-            line-height: 1.8;
-            font-size: 0.95em;
-            border-left: 4px solid #667eea;
-            transition: all 0.3s ease;
-        }
-
-        .about-text:hover {
-            transform: translateX(5px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
-        }
-
-        /* Skills Section */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-category {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
-        }
-
-        .skill-category h3 {
-            font-size: 1.2em;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-tag {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .skill-tag:hover {
-            background: white;
-            color: #667eea;
-            transform: scale(1.05);
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .project-card {
-            background: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 20px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            border-color: #667eea;
-            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
-        }
-
-        .project-title {
-            font-size: 1.2em;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .project-desc {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 12px;
-            line-height: 1.6;
-        }
-
-        .tech-stack {
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-        }
-
-        .tech-badge {
-            background: #f0f4ff;
-            color: #667eea;
-            padding: 4px 10px;
-            border-radius: 15px;
-            font-size: 0.8em;
-            font-weight: 600;
-        }
-
-        /* Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-        }
-
-        .timeline-item {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-left: 3px solid #667eea;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -8px;
-            top: 0;
-            width: 13px;
-            height: 13px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 0 0 3px #667eea;
-        }
-
-        .timeline-item:last-child {
-            border-left: 3px solid transparent;
-            padding-bottom: 0;
-        }
-
-        .timeline-title {
-            font-weight: 700;
-            color: #333;
-            font-size: 1.05em;
-            margin-bottom: 4px;
-        }
-
-        .timeline-subtitle {
-            color: #667eea;
-            font-size: 0.9em;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .timeline-desc {
-            color: #666;
-            font-size: 0.9em;
-            line-height: 1.5;
-        }
-
-        /* Stats */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .stat {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .stat:hover {
-            transform: scale(1.05);
-        }
-
-        .stat-number {
-            font-size: 2em;
-            font-weight: 800;
-            margin-bottom: 5px;
-        }
-
-        .stat-label {
-            font-size: 0.85em;
-            opacity: 0.9;
-        }
-
-        /* Footer */
-        .footer {
-            background: #f5f7fa;
-            padding: 20px 40px;
-            text-align: center;
-            color: #666;
-            font-size: 0.9em;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        /* Print Styles */
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-            .container {
-                box-shadow: none;
-                border-radius: 0;
-            }
-            .social-link:hover {
-                transform: none;
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .container { border-radius: 12px; }
-            .name { font-size: 1.8em; }
-            .tagline { font-size: 1em; }
-            .contact-info { gap: 12px; }
-            .section { margin-bottom: 25px; }
-            .skills-container { grid-template-columns: 1fr; }
-            .projects-grid { grid-template-columns: 1fr; }
-            .stats { grid-template-columns: repeat(2, 1fr); }
-        }
-    </style>
+    <meta name="description" content="Jahid Ekbal Mallick - Full-Stack Developer | UI/UX Designer | Esports Platform Builder | Founder @ REGIX Studio">
+    <meta name="keywords" content="Jahid Ekbal Mallick, Full-Stack Developer, UI/UX Designer, Esports Platform Builder, REGIX Studio, Portfolio">
+    <meta property="og:title" content="Jahid Ekbal Mallick - Portfolio">
+    <meta property="og:description" content="Full-Stack Developer | UI/UX Designer | Esports Platform Builder | Founder @ REGIX Studio">
+    <meta name="theme-color" content="#020812">
+    <title>Jahid Ekbal Mallick - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <div class="header-content">
-                <div class="name">🚀 JAHID EKBAL MALLICK</div>
-                <div class="tagline">💻 Full-Stack Developer & 🎨 Digital Creator</div>
-                
-                <div class="contact-info">
-                    <div class="contact-item">📧 jahidekbalmallick@gmail.com</div>
-                    <div class="contact-item">📱 +91 9733696362</div>
-                    <div class="contact-item">📍 Kolkata, West Bengal, India</div>
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                </> JAHID
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-right">
+                <div class="github-stats">
+                    <a href="https://github.com/jahid-ekbal" target="_blank" class="github-link">
+                        <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span class="follower-count" id="follower-count">10</span>
+                    </a>
                 </div>
-
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/jahid-developer" class="social-link" title="LinkedIn">💼</a>
-                    <a href="https://github.com/jahid-ekbal" class="social-link" title="GitHub">⚙️</a>
-                    <a href="https://www.behance.net/jahidemallick" class="social-link" title="Behance">🎨</a>
-                    <a href="https://x.com/JAHIDEKBAL01" class="social-link" title="Twitter">𝕏</a>
-                    <a href="https://www.youtube.com/@guru-esports" class="social-link" title="YouTube">📺</a>
-                    <a href="https://codepen.io/jahidekbalmallick-jahidekbalmallick-" class="social-link" title="CodePen">🖊️</a>
-                    <a href="https://discord.gg/YUMJdPtBDR" class="social-link" title="Discord">🎮</a>
+                <div class="theme-toggle">
+                    <button id="theme-switch" class="theme-switch-button" aria-label="Toggle theme">
+                        <i data-lucide="moon" stroke-width="2.5"></i>
+                    </button>
                 </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
+    </nav>
 
-        <!-- Content -->
-        <div class="content">
-            <!-- About Me -->
-            <div class="section">
-                <div class="section-title">💫 About Me</div>
-                <div class="about-text">
-                    I craft digital experiences that merge technical precision with visual innovation. As a versatile developer and designer, I bridge the gap between functionality and aesthetics to build engaging web solutions. My workflow combines clean, maintainable code with compelling visuals – ensuring every project achieves both technical excellence and visual impact. Whether building complex web applications or crafting social media content, I solve digital challenges with creativity and precision.
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-bg">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-name">
+                    <span class="glitch" data-text="JAHID EKBAL MALLICK">JAHID EKBAL MALLICK</span>
+                </h1>
+                <div class="hero-role">
+                    <span class="role-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-outline">View Projects</a>
+                    <a href="#contact" class="btn btn-solid">Contact Me</a>
+                </div>
+                <div class="hero-badge">
+                    <span class="pulse"></span>
+                    ⚡ Available for Projects
                 </div>
             </div>
+        </section>
 
-            <!-- Quick Stats -->
-            <div class="section">
-                <div class="section-title">📊 Quick Stats</div>
-                <div class="stats">
-                    <div class="stat">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Skills Mastered</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Dedication</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Available</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skills -->
-            <div class="section">
-                <div class="section-title">🛠️ Technical Skills</div>
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h3>🖥️ Frontend Development</h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">CSS3</span>
-                            <span class="skill-tag">JavaScript ES6+</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Next.js</span>
-                            <span class="skill-tag">TypeScript</span>
-                            <span class="skill-tag">Tailwind CSS</span>
-                            <span class="skill-tag">Bootstrap</span>
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>// ABOUT ME</h2>
+                        <p>I'm Jahid Ekbal Mallick, a passionate Full-Stack Developer and UI/UX Designer based in India 🇮🇳. As the Founder & Lead Engineer of REGIX Studio, I specialize in building innovative web solutions and esports platforms.</p>
+                        <p>Currently pursuing my 5th semester in IT, I'm continuously learning Web Penetration Testing, AI/ML Integration, and System Design. My tech stack includes Next.js, React, TypeScript, Node.js, Tailwind CSS, and more.</p>
+                        <div class="stat-chips">
+                            <span class="chip">5th Semester IT Student</span>
+                            <span class="chip">Founder REGIX Studio</span>
+                            <span class="chip">India 🇮🇳</span>
                         </div>
                     </div>
-
-                    <div class="skill-category">
-                        <h3>🎨 Design & Creative</h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">Figma</span>
-                            <span class="skill-tag">Photoshop</span>
-                            <span class="skill-tag">Premiere Pro</span>
-                            <span class="skill-tag">Blender 3D</span>
-                            <span class="skill-tag">UI/UX</span>
-                            <span class="skill-tag">Video Editing</span>
-                            <span class="skill-tag">Graphic Design</span>
-                            <span class="skill-tag">Animation</span>
+                    <div class="terminal-card glass">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">jahid@terminal:~$</span>
                         </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>📱 Digital Content</h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">Social Media</span>
-                            <span class="skill-tag">YouTube Content</span>
-                            <span class="skill-tag">Thumbnails</span>
-                            <span class="skill-tag">Advertising</span>
-                            <span class="skill-tag">Content Creation</span>
-                            <span class="skill-tag">SEO</span>
-                            <span class="skill-tag">Web Design</span>
-                            <span class="skill-tag">Responsive</span>
+                        <div class="terminal-content">
+                            <p><span class="terminal-prompt">$</span> whoami</p>
+                            <p class="terminal-output">> Jahid Ekbal Mallick</p>
+                            <p><span class="terminal-prompt">$</span> cat roles.txt</p>
+                            <p class="terminal-output">> Full-Stack Developer</p>
+                            <p class="terminal-output">> UI/UX Designer</p>
+                            <p class="terminal-output">> Esports Platform Builder</p>
+                            <p><span class="terminal-prompt">$</span> echo $FUN_FACT</p>
+                            <p class="terminal-output">> "I built a customized virus for you."</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Featured Projects -->
-            <div class="section">
-                <div class="section-title">🚀 Featured Projects</div>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-title">💼 Ekbal Studio</div>
-                        <div class="project-desc">Professional portfolio & e-commerce platform showcasing web development and digital design work with modern UI/UX.</div>
-                        <div class="tech-stack">
-                            <span class="tech-badge">React</span>
-                            <span class="tech-badge">Tailwind</span>
-                            <span class="tech-badge">Netlify</span>
-                        </div>
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>// TECH STACK</h2>
+                <div class="skills-grid">
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=html" alt="HTML5" loading="lazy">
+                        <span>HTML5</span>
                     </div>
-
-                    <div class="project-card">
-                        <div class="project-title">🎮 VNS Anon Team</div>
-                        <div class="project-desc">eSports gaming community website and content hub with tournament tracking and community engagement features.</div>
-                        <div class="tech-stack">
-                            <span class="tech-badge">HTML5</span>
-                            <span class="tech-badge">CSS3</span>
-                            <span class="tech-badge">JavaScript</span>
-                        </div>
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=css" alt="CSS3" loading="lazy">
+                        <span>CSS3</span>
                     </div>
-
-                    <div class="project-card">
-                        <div class="project-title">🎬 Guru eSports</div>
-                        <div class="project-desc">YouTube channel presence with custom thumbnails, video editing, and digital content strategy for gaming audience.</div>
-                        <div class="tech-stack">
-                            <span class="tech-badge">Premiere Pro</span>
-                            <span class="tech-badge">Photoshop</span>
-                            <span class="tech-badge">YouTube</span>
-                        </div>
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" loading="lazy">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript" loading="lazy">
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=react" alt="React" loading="lazy">
+                        <span>React</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=nextjs" alt="Next.js" loading="lazy">
+                        <span>Next.js</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS" loading="lazy">
+                        <span>Tailwind CSS</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=bootstrap" alt="Bootstrap" loading="lazy">
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" loading="lazy">
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=bun" alt="Bun" loading="lazy">
+                        <span>Bun</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=sqlite" alt="SQLite" loading="lazy">
+                        <span>SQLite</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=figma" alt="Figma" loading="lazy">
+                        <span>Figma</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=xd" alt="Adobe XD" loading="lazy">
+                        <span>Adobe XD</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=photoshop" alt="Photoshop" loading="lazy">
+                        <span>Photoshop</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=premiere" alt="Premiere Pro" loading="lazy">
+                        <span>Premiere Pro</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <img src="https://skillicons.dev/icons?i=git" alt="Git" loading="lazy">
+                        <span>Git</span>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Education & Experience -->
-            <div class="section">
-                <div class="section-title">🎓 Education & Experience</div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-title">🏫 Polytechnic Education</div>
-                        <div class="timeline-subtitle">Computer Science & Technology (CST)</div>
-                        <div class="timeline-desc">First-year polytechnic student pursuing comprehensive knowledge in web development, system administration, and digital technologies.</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-title">💡 Self-Taught Developer</div>
-                        <div class="timeline-subtitle">Continuous Learning & Skill Development</div>
-                        <div class="timeline-desc">Mastered modern web technologies through hands-on projects, online courses, and practical implementation in real-world applications.</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-title">🎨 Creative Designer</div>
-                        <div class="timeline-subtitle">UI/UX & Digital Content Specialist</div>
-                        <div class="timeline-desc">Advanced proficiency in Figma, Adobe Creative Suite, and 3D design with expertise in creating pixel-perfect interfaces and engaging visual content.</div>
-                    </div>
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>// PROJECTS</h2>
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects will be loaded dynamically from GitHub API -->
+                </div>
+                <div class="view-all-repos">
+                    <a href="repos.html" class="btn btn-primary">View All Repositories →</a>
                 </div>
             </div>
+        </section>
 
-            <!-- Key Achievements -->
-            <div class="section">
-                <div class="section-title">⭐ Key Achievements</div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-title">🏆 Multiple Project Completions</div>
-                        <div class="timeline-desc">Successfully delivered 50+ projects ranging from responsive websites to interactive web applications with 100% client satisfaction.</div>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>// GET IN TOUCH</h2>
+                <div class="contact-content">
+                    <div class="contact-info glass">
+                        <div class="email-block">
+                            <h3>Personal</h3>
+                            <p class="email" data-email="jahidekbalmallick@gmail.com">jahidekbalmallick@gmail.com</p>
+                        </div>
+                        <div class="email-block">
+                            <h3>Business</h3>
+                            <p class="email" data-email="jahidekbal.io@gmail.com">jahidekbal.io@gmail.com</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/jahid-ekbal" target="_blank" rel="noopener noreferrer" title="GitHub">🐙</a>
+                            <a href="https://linkedin.com/in/jahid-developer" target="_blank" rel="noopener noreferrer" title="LinkedIn">💼</a>
+                            <a href="https://twitter.com/jahidekbal01" target="_blank" rel="noopener noreferrer" title="Twitter/X">🐦</a>
+                            <a href="https://www.youtube.com/@teamregix" target="_blank" rel="noopener noreferrer" title="YouTube">📺</a>
+                            <a href="https://discord.gg/f8dcB5nDyh" target="_blank" rel="noopener noreferrer" title="Discord">💬</a>
+                            <a href="https://instagram.com/jahid.developer" target="_blank" rel="noopener noreferrer" title="Instagram">📸</a>
+                        </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-title">🌐 Strong Digital Presence</div>
-                        <div class="timeline-desc">Established professional portfolio across GitHub, LinkedIn, Behance, and social platforms showcasing diverse skill set and creative work.</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-title">🎯 eSports Community Leadership</div>
-                        <div class="timeline-desc">Active involvement in VNS Anon Team and Guru eSports community with content creation and technical management responsibilities.</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-title">📱 Responsive Design Excellence</div>
-                        <div class="timeline-desc">Specialized in creating mobile-first, ATS-optimized designs that maintain visual appeal across all devices and screen sizes.</div>
-                    </div>
+                    <form class="contact-form glass" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-solid">Send Message</button>
+                    </form>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <!-- Call to Action -->
-            <div class="section" style="text-align: center; background: linear-gradient(135deg, #667eea15, #764ba215); padding: 25px; border-radius: 12px;">
-                <h3 style="color: #667eea; margin-bottom: 10px;">🤝 Let's Collaborate!</h3>
-                <p style="color: #666; margin-bottom: 15px;">Always open to exciting projects and creative partnerships. Let's build something amazing together!</p>
-                <p style="font-size: 0.9em; color: #999;">📧 jahidekbalmallick@gmail.com | 📱 +91 9733696362</p>
+    <!-- Telegram-like Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="bottom-nav-container">
+            <a href="index.html" class="bottom-nav-item" aria-label="Home">
+                <i data-lucide="home" class="bottom-nav-icon"></i>
+                <span class="bottom-nav-label">Home</span>
+            </a>
+            <a href="about.html" class="bottom-nav-item" aria-label="About">
+                <i data-lucide="user" class="bottom-nav-icon"></i>
+                <span class="bottom-nav-label">About</span>
+            </a>
+            <a href="skills.html" class="bottom-nav-item" aria-label="Skills">
+                <i data-lucide="code" class="bottom-nav-icon"></i>
+                <span class="bottom-nav-label">Skills</span>
+            </a>
+            <a href="projects.html" class="bottom-nav-item" aria-label="Projects">
+                <i data-lucide="folder" class="bottom-nav-icon"></i>
+                <span class="bottom-nav-label">Projects</span>
+            </a>
+            <a href="contact.html" class="bottom-nav-item" aria-label="Contact">
+                <i data-lucide="mail" class="bottom-nav-icon"></i>
+                <span class="bottom-nav-label">Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Jahid Ekbal Mallick — Built with ❤️ & ☕</p>
+            <div class="footer-badges">
+                <img src="https://img.shields.io/github/stars/jahid-ekbal/jahid-ekbal?style=social" alt="GitHub stars" loading="lazy">
+                <img src="https://komarev.com/ghpvc/?username=jahid-ekbal&color=00F5FF&style=flat-square" alt="Profile views" loading="lazy">
             </div>
         </div>
+    </footer>
 
-        <!-- Footer -->
-        <div class="footer">
-            <p>💼 © 2025 Jahid Ekbal Mallick | Full-Stack Developer & Digital Creator | Kolkata, India</p>
-            <p>🔗 <a href="https://github.com/jahid-ekbal" style="color: #667eea; text-decoration: none;">GitHub</a> • <a href="https://www.linkedin.com/in/jahid-developer" style="color: #667eea; text-decoration: none;">LinkedIn</a> • <a href="https://www.behance.net/jahidemallick" style="color: #667eea; text-decoration: none;">Behance</a> • <a href="https://ekbal-studio.netlify.app" style="color: #667eea; text-decoration: none;">Portfolio</a></p>
-        </div>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/lucide.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
