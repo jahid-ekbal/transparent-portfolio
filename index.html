@@ -1,405 +1,983 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mahmood Fazile — UI/UX Designer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<!doctype html>
+<html
+  lang="en"
+  data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>JAHID</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="style.css" />
+  </head>
+  <body>
+    <!-- CURSOR -->
+    <div
+      class="cursor"
+      id="cursor"></div>
+    <div
+      class="cursor-dot"
+      id="cursorDot"></div>
 
-  <!-- CURSOR -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-dot" id="cursorDot"></div>
+    <!-- NOISE OVERLAY -->
+    <div class="noise-overlay"></div>
 
-  <!-- NOISE OVERLAY -->
-  <div class="noise-overlay"></div>
+    <!-- NAVBAR -->
+    <nav
+      class="navbar glass-nav"
+      id="navbar">
+      <div class="nav-inner">
+        <a
+          href="index.html"
+          class="nav-logo-link">
+          <img
+            src="images/img4.png"
+            alt="Brand Logo"
+            class="nav-logo" />
+          <span class="logo-text">Jahid Ekbal Mallick</span>
+        </a>
 
-  <!-- NAVBAR -->
-  <nav class="navbar glass-nav" id="navbar">
-    <div class="nav-inner">
-      <a href="#" class="logo-text">LOGO</a>
-      <ul class="nav-links">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#about" class="nav-link">About me</a></li>
-        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-        <li><a href="#contact" class="nav-link">Contact me</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="#contact" class="btn-hire">Hire Me</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <span class="toggle-track">
-            <span class="toggle-thumb">
-              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <ul class="nav-links">
+          <li>
+            <a
+              href="#home"
+              class="nav-link active"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="nav-link"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="nav-link"
+              >About me</a
+            >
+          </li>
+          <li>
+            <a
+              href="#portfolio"
+              class="nav-link"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="nav-link"
+              >Contact me</a
+            >
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <a
+            href="#contact"
+            class="btn-hire"
+            >Hire Me</a
+          >
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle theme">
+            <span class="toggle-track">
+              <span class="toggle-thumb">
+                <svg
+                  class="icon-sun"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2">
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="5" />
+                  <line
+                    x1="12"
+                    y1="1"
+                    x2="12"
+                    y2="3" />
+                  <line
+                    x1="12"
+                    y1="21"
+                    x2="12"
+                    y2="23" />
+                  <line
+                    x1="4.22"
+                    y1="4.22"
+                    x2="5.64"
+                    y2="5.64" />
+                  <line
+                    x1="18.36"
+                    y1="18.36"
+                    x2="19.78"
+                    y2="19.78" />
+                  <line
+                    x1="1"
+                    y1="12"
+                    x2="3"
+                    y2="12" />
+                  <line
+                    x1="21"
+                    y1="12"
+                    x2="23"
+                    y2="12" />
+                  <line
+                    x1="4.22"
+                    y1="19.78"
+                    x2="5.64"
+                    y2="18.36" />
+                  <line
+                    x1="18.36"
+                    y1="5.64"
+                    x2="19.78"
+                    y2="4.22" />
+                </svg>
+                <svg
+                  class="icon-moon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+              </span>
             </span>
-          </span>
+          </button>
+        </div>
+        <button
+          class="hamburger"
+          id="hamburger">
+          <span></span><span></span><span></span>
         </button>
       </div>
-      <button class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-      <ul>
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#about" class="nav-link">About me</a></li>
-        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-        <li><a href="#contact" class="nav-link">Contact me</a></li>
-      </ul>
-    </div>
-  </nav>
+      <!-- Mobile Menu -->
+      <div
+        class="mobile-menu"
+        id="mobileMenu">
+        <ul>
+          <li>
+            <a
+              href="#home"
+              class="nav-link"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="nav-link"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="nav-link"
+              >About me</a
+            >
+          </li>
+          <li>
+            <a
+              href="#portfolio"
+              class="nav-link"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="nav-link"
+              >Contact me</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-  <!-- HERO SECTION -->
-  <section class="hero-section" id="home">
-    <!-- Animated BG Blobs -->
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
+    <!-- HERO SECTION -->
+    <section
+      class="hero-section"
+      id="home">
+      <!-- Animated BG Blobs -->
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
 
-    <div class="hero-content">
-      <!-- Left Side -->
-      <div class="hero-left">
-        <p class="hero-greeting reveal-up">Hi I am</p>
-        <h2 class="hero-name reveal-up delay-1">Mahmood Fazile</h2>
-        <h1 class="hero-title reveal-up delay-2">UI/UX<br><span class="title-outline">designer</span></h1>
+      <div class="hero-content">
+        <!-- Left Side -->
+        <div class="hero-left">
+          <p class="hero-greeting reveal-up">Hi I am</p>
+          <h2 class="hero-name reveal-up delay-1">Jahid Ekbal Mallick</h2>
+          <h1 class="hero-title reveal-up delay-2">
+            UI/UX designer<br /><span class="title-outline">
+              Full-Stack Developer</span
+            >
+          </h1>
 
-        <div class="social-links reveal-up delay-3">
-          <!-- Instagram -->
-          <a href="#" class="social-icon" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <!-- LinkedIn -->
-          <a href="#" class="social-icon" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <!-- Dribbble -->
-          <a href="#" class="social-icon" aria-label="Dribbble">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
-          </a>
-          <!-- Behance -->
-          <a href="#" class="social-icon" aria-label="Behance">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 11.5c1.38 0 2.5-.67 2.5-1.5s-1.12-1.5-2.5-1.5H4v3h3.5zm.5 1.5H4v3.5h4c1.38 0 2.5-.67 2.5-1.75S9.38 13 8 13zm7-5h4v1h-4v-1zm0 0M14.5 15.5c.28.87 1.1 1.5 2 1.5 1.1 0 1.85-.5 2.25-1.5H22c-.5 2-2.25 3.5-4.5 3.5C14.75 19 13 17.25 13 15s1.75-4 4.5-4c2.5 0 4.5 1.75 4.5 4.25 0 .25 0 .5-.06.75H14.5zm4.5-1.5c-.28-.87-1.1-1.5-2-1.5-.9 0-1.72.63-2 1.5h4z"/></svg>
-          </a>
+          <div class="social-links reveal-up delay-3">
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/jahid.developer"
+              class="social-icon"
+              aria-label="Instagram">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8">
+                <rect
+                  x="2"
+                  y="2"
+                  width="20"
+                  height="20"
+                  rx="5"
+                  ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line
+                  x1="17.5"
+                  y1="6.5"
+                  x2="17.51"
+                  y2="6.5" />
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/jahid-developer"
+              class="social-icon"
+              aria-label="LinkedIn">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8">
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect
+                  x="2"
+                  y="9"
+                  width="4"
+                  height="12" />
+                <circle
+                  cx="4"
+                  cy="4"
+                  r="2" />
+              </svg>
+            </a>
+            <!-- Dribbble -->
+            <a
+              href="https://dribbble.com/jahid-ekbal-mallick"
+              class="social-icon"
+              aria-label="Dribbble">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8">
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10" />
+                <path
+                  d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32" />
+              </svg>
+            </a>
+            <!-- Behance -->
+            <a
+              href="https://www.behance.net/jahidemallick"
+              class="social-icon"
+              aria-label="Behance">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M7.5 11.5c1.38 0 2.5-.67 2.5-1.5s-1.12-1.5-2.5-1.5H4v3h3.5zm.5 1.5H4v3.5h4c1.38 0 2.5-.67 2.5-1.75S9.38 13 8 13zm7-5h4v1h-4v-1zm0 0M14.5 15.5c.28.87 1.1 1.5 2 1.5 1.1 0 1.85-.5 2.25-1.5H22c-.5 2-2.25 3.5-4.5 3.5C14.75 19 13 17.25 13 15s1.75-4 4.5-4c2.5 0 4.5 1.75 4.5 4.25 0 .25 0 .5-.06.75H14.5zm4.5-1.5c-.28-.87-1.1-1.5-2-1.5-.9 0-1.72.63-2 1.5h4z" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="cta-buttons reveal-up delay-4">
+            <a
+              href="https://github.com/jahid-ekbal"
+              class="btn-primary"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="19"
+                height="19"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-square-arrow-out-up-right-icon lucide-square-arrow-out-up-right">
+                <path
+                  d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
+                <path d="m21 3-9 9" />
+                <path d="M15 3h6v6" /></svg
+              >Hire Me</a
+            >
+            <a
+              href="Jahid-Ekbal-Resume/Jahid-Ekbal-Resume.docx.pdf"
+              class="btn-secondary"
+              download="Jahid-Ekbal-Resume.docx.pdf"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="19"
+                height="19"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-download-icon lucide-download">
+                <path d="M12 15V3" />
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <path d="m7 10 5 5 5-5" /></svg
+              >Download CV</a
+            >
+          </div>
+
+          <div class="stats-bar reveal-up delay-5">
+            <div class="stat-item">
+              <span
+                class="stat-num"
+                data-target="5"
+                >0</span
+              ><span class="stat-plus">+</span>
+              <p class="stat-label">Experiences</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span
+                class="stat-num"
+                data-target="20"
+                >0</span
+              ><span class="stat-plus">+</span>
+              <p class="stat-label">Project done</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span
+                class="stat-num"
+                data-target="80"
+                >0</span
+              ><span class="stat-plus">+</span>
+              <p class="stat-label">Happy Clients</p>
+            </div>
+          </div>
         </div>
 
-        <div class="cta-buttons reveal-up delay-4">
-          <a href="#contact" class="btn-primary">Hire Me</a>
-          <a href="#" class="btn-secondary">Download CV</a>
-        </div>
-
-        <div class="stats-bar reveal-up delay-5">
-          <div class="stat-item">
-            <span class="stat-num" data-target="5">0</span><span class="stat-plus">+</span>
-            <p class="stat-label">Experiences</p>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-num" data-target="20">0</span><span class="stat-plus">+</span>
-            <p class="stat-label">Project done</p>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-num" data-target="80">0</span><span class="stat-plus">+</span>
-            <p class="stat-label">Happy Clients</p>
+        <!-- Right Side - Photo -->
+        <div class="hero-right reveal-right">
+          <div class="photo-ring">
+            <div class="photo-glow"></div>
+            <div class="photo-circle">
+              <div class="photo-placeholder">
+                <img
+                  src="https://github.com/jahid-ekbal.png"
+                  alt=" Jahid Ekbal Mallick" />
+                <!-- <svg
+                  viewBox="0 0 200 220"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <ellipse
+                    cx="100"
+                    cy="75"
+                    rx="42"
+                    ry="48"
+                    fill="rgba(255,255,255,0.15)" />
+                  <path
+                    d="M20 200 Q20 140 100 140 Q180 140 180 200"
+                    fill="rgba(255,255,255,0.1)" />
+                  <circle
+                    cx="100"
+                    cy="75"
+                    r="42"
+                    fill="rgba(255,120,30,0.08)"
+                    stroke="rgba(255,120,30,0.2)"
+                    stroke-width="1" />
+                  <text
+                    x="100"
+                    y="82"
+                    text-anchor="middle"
+                    fill="rgba(255,255,255,0.4)"
+                    font-size="14"
+                    font-family="DM Sans">
+                    MF
+                  </text>
+                </svg> -->
+              </div>
+            </div>
+            <!-- Orbiting dot -->
+            <div class="orbit-ring">
+              <div class="orbit-dot"></div>
+            </div>
+            <!-- Floating tags -->
+            <div class="float-tag tag-1"><span>✦</span> UI Design</div>
+            <div class="float-tag tag-2">
+              <span>◈</span> Full-Stack Development
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Right Side - Photo -->
-      <div class="hero-right reveal-right">
-        <div class="photo-ring">
-          <div class="photo-glow"></div>
-          <div class="photo-circle">
-            <div class="photo-placeholder">
-              <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="100" cy="75" rx="42" ry="48" fill="rgba(255,255,255,0.15)"/>
-                <path d="M20 200 Q20 140 100 140 Q180 140 180 200" fill="rgba(255,255,255,0.1)"/>
-                <circle cx="100" cy="75" r="42" fill="rgba(255,120,30,0.08)" stroke="rgba(255,120,30,0.2)" stroke-width="1"/>
-                <text x="100" y="82" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="14" font-family="DM Sans">MF</text>
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section
+      class="services-section"
+      id="services">
+      <div class="section-container">
+        <div class="section-header">
+          <p class="section-eyebrow reveal-up">What I do</p>
+          <h2 class="section-title reveal-up delay-1">
+            My <span class="accent">Services</span>
+          </h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card glass-card reveal-up delay-1">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5">
+                <rect
+                  x="2"
+                  y="3"
+                  width="20"
+                  height="14"
+                  rx="2" />
+                <path d="M8 21h8M12 17v4" />
               </svg>
             </div>
+            <h3>UI Design</h3>
+            <p>
+              Crafting visually stunning interfaces that balance aesthetics with
+              usability and brand identity.
+            </p>
+            <div class="card-arrow">→</div>
           </div>
-          <!-- Orbiting dot -->
-          <div class="orbit-ring">
-            <div class="orbit-dot"></div>
+          <div class="service-card glass-card reveal-up delay-2">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle
+                  cx="9"
+                  cy="7"
+                  r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3>UX Research</h3>
+            <p>
+              Deep user understanding through interviews, testing and
+              data-driven insights to inform design.
+            </p>
+            <div class="card-arrow">→</div>
           </div>
-          <!-- Floating tags -->
-          <div class="float-tag tag-1">
-            <span>✦</span> UI Design
+          <div class="service-card glass-card reveal-up delay-3">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
+            </div>
+            <h3>Prototyping</h3>
+            <p>
+              Interactive high-fidelity prototypes that bring ideas to life
+              before a single line of code is written.
+            </p>
+            <div class="card-arrow">→</div>
           </div>
-          <div class="float-tag tag-2">
-            <span>◈</span> UX Research
+          <div class="service-card glass-card reveal-up delay-4">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5">
+                <path d="M12 20h9" />
+                <path
+                  d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+              </svg>
+            </div>
+            <h3>Brand Identity</h3>
+            <p>
+              Building cohesive visual systems — from logos to full design
+              languages — that tell your story.
+            </p>
+            <div class="card-arrow">→</div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Scroll indicator -->
-    <div class="scroll-indicator">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
-    </div>
-  </section>
-
-  <!-- SERVICES SECTION -->
-  <section class="services-section" id="services">
-    <div class="section-container">
-      <div class="section-header">
-        <p class="section-eyebrow reveal-up">What I do</p>
-        <h2 class="section-title reveal-up delay-1">My <span class="accent">Services</span></h2>
+    <!-- ABOUT SECTION -->
+    <section
+      class="about-section"
+      id="about">
+      <div class="section-container about-inner">
+        <div class="about-left">
+          <div class="about-photo-wrap reveal-left">
+            <div class="about-photo-ring"></div>
+            <div class="about-photo glass-card">
+              <img
+                src="images/image1.png"
+                alt=" Jahid Ekbal Mallick" />
+              <!-- <svg
+                viewBox="0 0 240 300"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  width="240"
+                  height="300"
+                  rx="16"
+                  fill="rgba(255,120,30,0.05)" />
+                <ellipse
+                  cx="120"
+                  cy="110"
+                  rx="55"
+                  ry="65"
+                  fill="rgba(255,255,255,0.08)" />
+                <path
+                  d="M20 290 Q20 180 120 180 Q220 180 220 290"
+                  fill="rgba(255,255,255,0.05)" />
+                <text
+                  x="120"
+                  y="120"
+                  text-anchor="middle"
+                  fill="rgba(255,255,255,0.3)"
+                  font-size="18"
+                  font-family="DM Sans">
+                  MF
+                </text>
+              </svg> -->
+            </div>
+            <div class="exp-badge glass-card">
+              <span class="exp-num">5+</span>
+              <span class="exp-text">Years<br />Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-right reveal-right">
+          <p class="section-eyebrow">Get to know me</p>
+          <h2 class="section-title">About <span class="accent">Me</span></h2>
+          <p class="about-desc">
+            I'm a passionate UI/UX Designer with over 5 years of experience
+            crafting intuitive and visually compelling digital experiences. I
+            bridge the gap between user needs and business goals through
+            thoughtful design.
+          </p>
+          <div class="skills-list">
+            <div class="skill-row">
+              <span class="skill-name">Figma</span>
+              <div class="skill-bar">
+                <div
+                  class="skill-fill"
+                  data-width="92%"></div>
+              </div>
+              <span class="skill-pct">92%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">UI Design</span>
+              <div class="skill-bar">
+                <div
+                  class="skill-fill"
+                  data-width="88%"></div>
+              </div>
+              <span class="skill-pct">88%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Prototyping</span>
+              <div class="skill-bar">
+                <div
+                  class="skill-fill"
+                  data-width="85%"></div>
+              </div>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-name">Branding</span>
+              <div class="skill-bar">
+                <div
+                  class="skill-fill"
+                  data-width="78%"></div>
+              </div>
+              <span class="skill-pct">78%</span>
+            </div>
+          </div>
+          <a
+            href="Jahid-Ekbal-Resume/Jahid-Ekbal-Resume.docx.pdf"
+            class="btn-primary mt-8 inline-block"
+            download="Jahid-Ekbal-Resume/Jahid-Ekbal-Resume.docx.pdf"
+            >Download CV</a
+          >
+        </div>
       </div>
-      <div class="services-grid">
-        <div class="service-card glass-card reveal-up delay-1">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
-          <h3>UI Design</h3>
-          <p>Crafting visually stunning interfaces that balance aesthetics with usability and brand identity.</p>
-          <div class="card-arrow">→</div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section
+      class="portfolio-section"
+      id="portfolio">
+      <div class="section-container">
+        <div class="section-header">
+          <p class="section-eyebrow reveal-up">My Work</p>
+          <h2 class="section-title reveal-up delay-1">
+            Recent <span class="accent">Projects</span>
+          </h2>
         </div>
-        <div class="service-card glass-card reveal-up delay-2">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>UX Research</h3>
-          <p>Deep user understanding through interviews, testing and data-driven insights to inform design.</p>
-          <div class="card-arrow">→</div>
+        <div class="portfolio-filter reveal-up delay-2">
+          <button
+            class="filter-btn active"
+            data-filter="all">
+            All
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="ui">
+            UI Design
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="ux">
+            UX Research
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="brand">
+            Branding
+          </button>
         </div>
-        <div class="service-card glass-card reveal-up delay-3">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        <div class="portfolio-grid">
+          <div
+            class="portfolio-card glass-card reveal-up delay-1"
+            data-cat="ui">
+            <div
+              class="port-img"
+              style="
+                background: linear-gradient(135deg, #ff781e33 0%, #1a1a2e 100%);
+              ">
+              <span class="port-icon">🎨</span>
+            </div>
+            <div class="port-info">
+              <span class="port-tag">UI Design</span>
+              <h3>Finance Dashboard</h3>
+              <p>Modern fintech app redesign</p>
+            </div>
+            <a
+              href="#"
+              class="port-link"
+              >View →</a
+            >
           </div>
-          <h3>Prototyping</h3>
-          <p>Interactive high-fidelity prototypes that bring ideas to life before a single line of code is written.</p>
-          <div class="card-arrow">→</div>
-        </div>
-        <div class="service-card glass-card reveal-up delay-4">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          <div
+            class="portfolio-card glass-card reveal-up delay-2"
+            data-cat="ux">
+            <div
+              class="port-img"
+              style="
+                background: linear-gradient(135deg, #ff781e22 0%, #0f3460 100%);
+              ">
+              <span class="port-icon">🔍</span>
+            </div>
+            <div class="port-info">
+              <span class="port-tag">UX Research</span>
+              <h3>E-Commerce Flow</h3>
+              <p>User journey optimization</p>
+            </div>
+            <a
+              href="#"
+              class="port-link"
+              >View →</a
+            >
           </div>
-          <h3>Brand Identity</h3>
-          <p>Building cohesive visual systems — from logos to full design languages — that tell your story.</p>
-          <div class="card-arrow">→</div>
+          <div
+            class="portfolio-card glass-card reveal-up delay-3"
+            data-cat="brand">
+            <div
+              class="port-img"
+              style="
+                background: linear-gradient(135deg, #ff781e44 0%, #16213e 100%);
+              ">
+              <span class="port-icon">✦</span>
+            </div>
+            <div class="port-info">
+              <span class="port-tag">Branding</span>
+              <h3>Luxe Brand System</h3>
+              <p>Complete visual identity</p>
+            </div>
+            <a
+              href="#"
+              class="port-link"
+              >View →</a
+            >
+          </div>
+          <div
+            class="portfolio-card glass-card reveal-up delay-4"
+            data-cat="ui">
+            <div
+              class="port-img"
+              style="
+                background: linear-gradient(135deg, #ff781e1a 0%, #1a1a2e 100%);
+              ">
+              <span class="port-icon">📱</span>
+            </div>
+            <div class="port-info">
+              <span class="port-tag">UI Design</span>
+              <h3>Health & Wellness App</h3>
+              <p>Mobile-first design system</p>
+            </div>
+            <a
+              href="#"
+              class="port-link"
+              >View →</a
+            >
+          </div>
+          <div
+            class="portfolio-card glass-card reveal-up delay-2"
+            data-cat="ux">
+            <div
+              class="port-img"
+              style="
+                background: linear-gradient(135deg, #ff781e2a 0%, #0d0d1a 100%);
+              ">
+              <span class="port-icon">⚡</span>
+            </div>
+            <div class="port-info">
+              <span class="port-tag">UX Research</span>
+              <h3>SaaS Onboarding</h3>
+              <p>Conversion rate optimization</p>
+            </div>
+            <a
+              href="#"
+              class="port-link"
+              >View →</a
+            >
+          </div>
+          <div
+            class="portfolio-card glass-card reveal-up delay-3"
+            data-cat="brand">
+            <div
+              class="port-img"
+              style="
+                background: linear-gradient(135deg, #ff781e3a 0%, #1c1c2e 100%);
+              ">
+              <span class="port-icon">🏆</span>
+            </div>
+            <div class="port-info">
+              <span class="port-tag">Branding</span>
+              <h3>Sports Brand Identity</h3>
+              <p>Esports team visual system</p>
+            </div>
+            <a
+              href="#"
+              class="port-link"
+              >View →</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ABOUT SECTION -->
-  <section class="about-section" id="about">
-    <div class="section-container about-inner">
-      <div class="about-left">
-        <div class="about-photo-wrap reveal-left">
-          <div class="about-photo-ring"></div>
-          <div class="about-photo glass-card">
-            <svg viewBox="0 0 240 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="240" height="300" rx="16" fill="rgba(255,120,30,0.05)"/>
-              <ellipse cx="120" cy="110" rx="55" ry="65" fill="rgba(255,255,255,0.08)"/>
-              <path d="M20 290 Q20 180 120 180 Q220 180 220 290" fill="rgba(255,255,255,0.05)"/>
-              <text x="120" y="120" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="18" font-family="DM Sans">MF</text>
+    <!-- CONTACT SECTION -->
+    <section
+      class="contact-section"
+      id="contact">
+      <div class="blob blob-4"></div>
+      <div class="section-container contact-inner">
+        <div class="contact-left reveal-left">
+          <p class="section-eyebrow">Get In Touch</p>
+          <h2 class="section-title">
+            Let's Work <span class="accent">Together</span>
+          </h2>
+          <p class="contact-desc">
+            Have a project in mind? I'd love to hear about it. Let's create
+            something amazing together.
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8">
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div>
+                <p class="contact-label">Email</p>
+                <p class="contact-value">jahidekbalmallick@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle
+                    cx="12"
+                    cy="10"
+                    r="3" />
+                </svg>
+              </div>
+              <div>
+                <p class="contact-label">Location</p>
+                <p class="contact-value">Kolkata, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right reveal-right">
+          <div class="contact-form glass-card">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input
+                type="text"
+                placeholder="Jahid Ekbal Mallick"
+                class="form-input" />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input
+                type="email"
+                placeholder="jahid@example.com"
+                class="form-input" />
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input
+                type="text"
+                placeholder="Project Discussion"
+                class="form-input" />
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea
+                placeholder="Tell me about your project..."
+                class="form-input form-textarea"
+                rows="4"></textarea>
+            </div>
+            <button
+              class="btn-primary w-full"
+              onclick="handleSubmit(this)">
+              Send Message
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-logo">Jahid Ekbal Mallick</div>
+        <p class="footer-copy">
+          © 2026 Jahid Ekbal Mallick. All rights reserved.
+        </p>
+        <div class="footer-socials">
+          <a
+            href="https://www.instagram.com/jahid.developer"
+            aria-label="Instagram"
+            class="social-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8">
+              <rect
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+                rx="5"
+                ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line
+                x1="17.5"
+                y1="6.5"
+                x2="17.51"
+                y2="6.5" />
             </svg>
-          </div>
-          <div class="exp-badge glass-card">
-            <span class="exp-num">5+</span>
-            <span class="exp-text">Years<br>Experience</span>
-          </div>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jahid-developer"
+            aria-label="LinkedIn"
+            class="social-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8">
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect
+                x="2"
+                y="9"
+                width="4"
+                height="12" />
+              <circle
+                cx="4"
+                cy="4"
+                r="2" />
+            </svg>
+          </a>
+          <a
+            href="https://www.behance.net/jahidemallick"
+            aria-label="Behance"
+            class="social-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M7.5 11.5c1.38 0 2.5-.67 2.5-1.5s-1.12-1.5-2.5-1.5H4v3h3.5zm.5 1.5H4v3.5h4c1.38 0 2.5-.67 2.5-1.75S9.38 13 8 13zm7-5h4v1h-4v-1zm0 0M14.5 15.5c.28.87 1.1 1.5 2 1.5 1.1 0 1.85-.5 2.25-1.5H22c-.5 2-2.25 3.5-4.5 3.5C14.75 19 13 17.25 13 15s1.75-4 4.5-4c2.5 0 4.5 1.75 4.5 4.25 0 .25 0 .5-.06.75H14.5zm4.5-1.5c-.28-.87-1.1-1.5-2-1.5-.9 0-1.72.63-2 1.5h4z" />
+            </svg>
+          </a>
         </div>
       </div>
-      <div class="about-right reveal-right">
-        <p class="section-eyebrow">Get to know me</p>
-        <h2 class="section-title">About <span class="accent">Me</span></h2>
-        <p class="about-desc">I'm a passionate UI/UX Designer with over 5 years of experience crafting intuitive and visually compelling digital experiences. I bridge the gap between user needs and business goals through thoughtful design.</p>
-        <div class="skills-list">
-          <div class="skill-row">
-            <span class="skill-name">Figma</span>
-            <div class="skill-bar"><div class="skill-fill" data-width="92%"></div></div>
-            <span class="skill-pct">92%</span>
-          </div>
-          <div class="skill-row">
-            <span class="skill-name">UI Design</span>
-            <div class="skill-bar"><div class="skill-fill" data-width="88%"></div></div>
-            <span class="skill-pct">88%</span>
-          </div>
-          <div class="skill-row">
-            <span class="skill-name">Prototyping</span>
-            <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
-            <span class="skill-pct">85%</span>
-          </div>
-          <div class="skill-row">
-            <span class="skill-name">Branding</span>
-            <div class="skill-bar"><div class="skill-fill" data-width="78%"></div></div>
-            <span class="skill-pct">78%</span>
-          </div>
-        </div>
-        <a href="#" class="btn-primary mt-8 inline-block">Download CV</a>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- PORTFOLIO SECTION -->
-  <section class="portfolio-section" id="portfolio">
-    <div class="section-container">
-      <div class="section-header">
-        <p class="section-eyebrow reveal-up">My Work</p>
-        <h2 class="section-title reveal-up delay-1">Recent <span class="accent">Projects</span></h2>
-      </div>
-      <div class="portfolio-filter reveal-up delay-2">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="ui">UI Design</button>
-        <button class="filter-btn" data-filter="ux">UX Research</button>
-        <button class="filter-btn" data-filter="brand">Branding</button>
-      </div>
-      <div class="portfolio-grid">
-        <div class="portfolio-card glass-card reveal-up delay-1" data-cat="ui">
-          <div class="port-img" style="background: linear-gradient(135deg, #FF781E33 0%, #1a1a2e 100%);">
-            <span class="port-icon">🎨</span>
-          </div>
-          <div class="port-info">
-            <span class="port-tag">UI Design</span>
-            <h3>Finance Dashboard</h3>
-            <p>Modern fintech app redesign</p>
-          </div>
-          <a href="#" class="port-link">View →</a>
-        </div>
-        <div class="portfolio-card glass-card reveal-up delay-2" data-cat="ux">
-          <div class="port-img" style="background: linear-gradient(135deg, #FF781E22 0%, #0f3460 100%);">
-            <span class="port-icon">🔍</span>
-          </div>
-          <div class="port-info">
-            <span class="port-tag">UX Research</span>
-            <h3>E-Commerce Flow</h3>
-            <p>User journey optimization</p>
-          </div>
-          <a href="#" class="port-link">View →</a>
-        </div>
-        <div class="portfolio-card glass-card reveal-up delay-3" data-cat="brand">
-          <div class="port-img" style="background: linear-gradient(135deg, #FF781E44 0%, #16213e 100%);">
-            <span class="port-icon">✦</span>
-          </div>
-          <div class="port-info">
-            <span class="port-tag">Branding</span>
-            <h3>Luxe Brand System</h3>
-            <p>Complete visual identity</p>
-          </div>
-          <a href="#" class="port-link">View →</a>
-        </div>
-        <div class="portfolio-card glass-card reveal-up delay-4" data-cat="ui">
-          <div class="port-img" style="background: linear-gradient(135deg, #FF781E1A 0%, #1a1a2e 100%);">
-            <span class="port-icon">📱</span>
-          </div>
-          <div class="port-info">
-            <span class="port-tag">UI Design</span>
-            <h3>Health & Wellness App</h3>
-            <p>Mobile-first design system</p>
-          </div>
-          <a href="#" class="port-link">View →</a>
-        </div>
-        <div class="portfolio-card glass-card reveal-up delay-2" data-cat="ux">
-          <div class="port-img" style="background: linear-gradient(135deg, #FF781E2A 0%, #0d0d1a 100%);">
-            <span class="port-icon">⚡</span>
-          </div>
-          <div class="port-info">
-            <span class="port-tag">UX Research</span>
-            <h3>SaaS Onboarding</h3>
-            <p>Conversion rate optimization</p>
-          </div>
-          <a href="#" class="port-link">View →</a>
-        </div>
-        <div class="portfolio-card glass-card reveal-up delay-3" data-cat="brand">
-          <div class="port-img" style="background: linear-gradient(135deg, #FF781E3A 0%, #1c1c2e 100%);">
-            <span class="port-icon">🏆</span>
-          </div>
-          <div class="port-info">
-            <span class="port-tag">Branding</span>
-            <h3>Sports Brand Identity</h3>
-            <p>Esports team visual system</p>
-          </div>
-          <a href="#" class="port-link">View →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section class="contact-section" id="contact">
-    <div class="blob blob-4"></div>
-    <div class="section-container contact-inner">
-      <div class="contact-left reveal-left">
-        <p class="section-eyebrow">Get In Touch</p>
-        <h2 class="section-title">Let's Work <span class="accent">Together</span></h2>
-        <p class="contact-desc">Have a project in mind? I'd love to hear about it. Let's create something amazing together.</p>
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div>
-              <p class="contact-label">Email</p>
-              <p class="contact-value">mahmood@design.io</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <p class="contact-label">Location</p>
-              <p class="contact-value">Dubai, UAE</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="contact-right reveal-right">
-        <div class="contact-form glass-card">
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" placeholder="John Doe" class="form-input" />
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" placeholder="john@example.com" class="form-input" />
-          </div>
-          <div class="form-group">
-            <label>Subject</label>
-            <input type="text" placeholder="Project Discussion" class="form-input" />
-          </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea placeholder="Tell me about your project..." class="form-input form-textarea" rows="4"></textarea>
-          </div>
-          <button class="btn-primary w-full" onclick="handleSubmit(this)">Send Message</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-logo">LOGO</div>
-      <p class="footer-copy">© 2025 Mahmood Fazile. All rights reserved.</p>
-      <div class="footer-socials">
-        <a href="#" aria-label="Instagram" class="social-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
-        <a href="#" aria-label="LinkedIn" class="social-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-        <a href="#" aria-label="Behance" class="social-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 11.5c1.38 0 2.5-.67 2.5-1.5s-1.12-1.5-2.5-1.5H4v3h3.5zm.5 1.5H4v3.5h4c1.38 0 2.5-.67 2.5-1.75S9.38 13 8 13zm7-5h4v1h-4v-1zm0 0M14.5 15.5c.28.87 1.1 1.5 2 1.5 1.1 0 1.85-.5 2.25-1.5H22c-.5 2-2.25 3.5-4.5 3.5C14.75 19 13 17.25 13 15s1.75-4 4.5-4c2.5 0 4.5 1.75 4.5 4.25 0 .25 0 .5-.06.75H14.5zm4.5-1.5c-.28-.87-1.1-1.5-2-1.5-.9 0-1.72.63-2 1.5h4z"/></svg>
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
