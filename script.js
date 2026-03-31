@@ -1,19 +1,33 @@
-// ===== THEME TOGGLE (BUTTON) =====
+/* ==========================================
+   GLASS MORPHISM PORTFOLIO - ENHANCED JAVASCRIPT
+   ========================================== */
+
+// ===== DOM READY INITIALIZATION =====
+document.addEventListener("DOMContentLoaded", () => {
+  initThemeToggle();
+  initMobileMenu();
+  initTypingEffect();
+  initScrollAnimations();
+  initFormHandling();
+  initSmoothScrolling();
+  lucide.createIcons();
+});
+
+// ===== THEME TOGGLE FUNCTIONALITY =====
 function initThemeToggle() {
-  const themeButton = document.getElementById("theme-switch");
+  const themeToggle = document.getElementById("theme-toggle");
   const body = document.body;
 
   const currentTheme = localStorage.getItem("theme") || "dark";
-  body.classList.toggle("light-theme", currentTheme === "light");
-  applyThemeBackground(currentTheme);
+  applyTheme(currentTheme);
 
   function updateButtonLabel(theme) {
-    if (!themeButton) return;
-    themeButton.innerHTML =
+    if (!themeToggle) return;
+    themeToggle.innerHTML =
       theme === "light" ?
         '<i data-lucide="sun" stroke-width="2.5"></i>'
       : '<i data-lucide="moon" stroke-width="2.5"></i>';
-    themeButton.classList.toggle("active", theme === "light");
+    themeToggle.classList.toggle("active", theme === "light");
     if (window.lucide) {
       lucide.replace();
     }
@@ -31,8 +45,8 @@ function initThemeToggle() {
 
   updateButtonLabel(currentTheme);
 
-  if (themeButton) {
-    themeButton.addEventListener("click", () => {
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
       const isLight = body.classList.toggle("light-theme");
       const newTheme = isLight ? "light" : "dark";
       localStorage.setItem("theme", newTheme);
@@ -80,7 +94,7 @@ function loadProjects(repos) {
 
   projectsGrid.innerHTML = featuredRepos
     .map((repo) => {
-      const accentColors = ["cyan", "purple", "pink"];
+      const accentColors = ["orange", "amber", "rose"];
       const randomColor =
         accentColors[Math.floor(Math.random() * accentColors.length)];
 
