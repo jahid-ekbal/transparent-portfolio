@@ -1,305 +1,181 @@
-# 🚀 Portfolio — Jahid Ekbal Mallick
+# Mahmood Fazile — UI/UX Designer Portfolio
 
-> A modern, interactive, and glassmorphic portfolio built with **HTML5, CSS3, and Vanilla JavaScript**. Features a dynamic island navbar, dark/light theme toggle, GitHub API integration, and smooth animations.
+> A pixel-perfect, fully responsive portfolio website featuring dual dark/light themes with glassmorphism aesthetics, motion graphics, and smooth interactions.
 
-![Portfolio Preview](https://img.shields.io/badge/Status-Active-success?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
-![Last Updated](https://img.shields.io/badge/Updated-March%202026-brightgreen?style=flat-square)
+![Portfolio Preview](preview.png)
 
 ---
 
 ## ✨ Features
 
-- **🎨 Dynamic Island Navbar** — iOS-inspired pill-shaped navigation bar with glassmorphism
-- **🌓 Dark/Light Theme Toggle** — Seamless theme switching with persistent localStorage
-- **🎭 Glassmorphism UI** — Modern glass effects with backdrop blur and iOS-style cards
-- **📱 Fully Responsive** — Optimized for mobile, tablet, and desktop devices
-- **⚡ GitHub API Integration** — Display live GitHub stats, followers, and repositories
-- **🎬 Smooth Animations** — Typewriter effect, scroll reveal, glitch animations, and transitions
-- **🧩 Multi-Page Architecture** — Dedicated pages for Home, About, Skills, Projects, and Contact
-- **🎯 Lucide Icons** — Beautiful SVG icons for navigation and UI elements
-- **📊 Interactive Elements** — Hover effects, text shadows, and scale animations
-- **🔍 SEO Optimized** — Meta tags, structured data, and semantic HTML
+- **Dual Theme System** — Seamless dark/light mode toggle with localStorage persistence
+- **Glassmorphism UI** — `backdrop-filter` based glass cards throughout
+- **Motion Graphics** — Scroll-triggered reveal animations, floating elements, pulsing glows, orbiting rings
+- **Custom Cursor** — Smooth-follow cursor with interactive state changes
+- **Counter Animations** — IntersectionObserver-driven stat counters
+- **Skill Bar Animations** — CSS-transition based animated progress bars
+- **Portfolio Filter** — Animated category filtering with smooth transitions
+- **Parallax Blobs** — Mouse-driven background depth effect
+- **Fully Responsive** — Mobile-first breakpoints: 480px / 768px / 1024px
+- **Accessible** — Semantic HTML5, ARIA labels, keyboard navigation
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
-| Category       | Technologies                                                 |
-| -------------- | ------------------------------------------------------------ |
-| **Frontend**   | HTML5, CSS3, Vanilla JavaScript                              |
-| **Styling**    | CSS Variables, Glassmorphism, Responsive Design              |
-| **API**        | GitHub REST API                                              |
-| **Icons**      | Lucide Icons                                                 |
-| **Fonts**      | Syne (Display), JetBrains Mono (Monospace)                   |
-| **Animations** | CSS Keyframes, Transitions, JavaScript RequestAnimationFrame |
+| Layer      | Technology                           |
+|------------|--------------------------------------|
+| Markup     | HTML5 (semantic)                     |
+| Styling    | CSS3 + Tailwind CSS CDN              |
+| Scripts    | Vanilla JavaScript (ES2020+)         |
+| Fonts      | Bebas Neue · DM Sans · Instrument Serif (Google Fonts) |
+| Icons      | Inline SVGs (no external deps)       |
 
 ---
 
 ## 📁 Project Structure
 
 ```
-transparent-portfolio/
-├── index.html              # Home page
-├── about.html              # About section
-├── skills.html             # Skills & tech stack
-├── projects.html           # Projects showcase
-├── contact.html            # Contact form
-├── repos.html              # GitHub repositories
-├── repo-flash-r.html       # Individual repo details
-├── style.css               # Main stylesheet
-├── script.js               # Core JavaScript
-├── repos.js                # Repos page script
-├── README.md               # This file
-├── LICENSE                 # MIT License
-└── .gitignore              # Git configuration
+portfolio/
+├── index.html       # Main HTML (all sections)
+├── style.css        # All styles, CSS variables, animations
+├── script.js        # Theme toggle, cursor, observers, interactions
+└── README.md        # This file
 ```
 
 ---
 
-## 🚀 Quick Start
+## 🎨 Design System
 
-### Prerequisites
+### Color Palette
 
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- No build tools or dependencies required
+| Token            | Dark                     | Light                    |
+|------------------|--------------------------|--------------------------|
+| `--accent`       | `#FF781E`                | `#FF781E`                |
+| `--bg-primary`   | `#0D0D0D`                | `#F2EDE8`                |
+| `--text-primary` | `#F5F5F5`                | `#1A1410`                |
+| `--glass-bg`     | `rgba(20,20,20,0.60)`    | `rgba(242,237,232,0.65)` |
+| `--border`       | `rgba(255,255,255,0.08)` | `rgba(0,0,0,0.08)`       |
 
-### Installation
+### Typography
 
-1. **Clone the repository:**
+| Role    | Font            | Weight | Usage              |
+|---------|-----------------|--------|--------------------|
+| Display | Bebas Neue      | 400    | Hero title, section headings, logo |
+| Serif   | Instrument Serif| 400/i  | Card headings |
+| Body    | DM Sans         | 300–700| All body copy, nav, buttons |
 
-   ```bash
-   git clone https://github.com/jahid-ekbal/transparent-portfolio.git
-   cd transparent-portfolio
-   ```
-
-2. **Start local development server:**
-
-   ```bash
-   # Using Python 3
-   python -m http.server 8000
-
-   # Using Node.js
-   npx http-server
-
-   # Using PHP
-   php -S localhost:8000
-   ```
-
-3. **Open in browser:**
-   ```
-   http://localhost:8000
-   ```
+### Spacing Scale
+`4 · 8 · 12 · 16 · 20 · 24 · 28 · 32 · 36 · 40 · 48 · 60 · 80 · 120`
 
 ---
 
-## 🎨 Theme Customization
+## 🚀 Getting Started
 
-### Dark Theme (Default)
+### 1. Clone or Download
 
-```css
-:root {
-  --bg-primary: #000000;
-  --text-primary: #ffffff;
-  --glass-bg: rgba(255, 255, 255, 0.08);
-}
+```bash
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
 ```
 
-### Light Theme
+### 2. Run Locally
 
-```css
-body.light-theme {
-  --bg-primary: #ffffff;
-  --text-primary: #000000;
-  --glass-bg: rgba(0, 0, 0, 0.08);
-}
-```
+No build step required — pure HTML/CSS/JS.
 
-### Toggle Theme Programmatically
+```bash
+# Option A: Open directly
+open index.html
 
-```javascript
-const themeButton = document.getElementById("theme-switch");
-themeButton.click(); // Toggle theme
+# Option B: Live server (VS Code extension)
+# Right-click index.html → Open with Live Server
+
+# Option C: Python quick server
+python3 -m http.server 3000
+# Visit http://localhost:3000
 ```
 
 ---
 
-## 🔧 Core Features Explained
+## 📐 Sections
 
-### Dynamic Island Navbar
-
-The navbar implements iOS-inspired design:
-
-- Pill-shaped container with glassmorphism
-- Smooth transitions and hover effects
-- Responsive behavior on mobile devices
-
-**CSS Class:** `.glass-nav`, `.nav-container`
-
-### Theme Toggle with Background Color Change
-
-Click the theme button to instantly:
-
-- Toggle between dark (`#020812`) and light (`#ffffff`) modes
-- Apply background color to entire website
-- Persist preference in localStorage
-- Update all component colors via CSS variables
-
-**Implementation:**
-
-```javascript
-// script.js
-function initThemeToggle() {
-  const body = document.body;
-  const themeButton = document.getElementById("theme-switch");
-
-  themeButton.addEventListener("click", () => {
-    body.classList.toggle("light-theme");
-    // Background color automatically updates via CSS transitions
-  });
-}
-```
-
-### GitHub API Integration
-
-Fetch and display:
-
-- Follower count
-- Public repositories (sorted by recent)
-- Repository stars and forks
-- Live sync across all pages
-
-**API Endpoint:** `https://api.github.com/users/jahid-ekbal`
-
-### Glassmorphism Effects
-
-**Primary Glass (.glass):**
-
-- 20px blur + 180% saturation
-- Badge inset shadow for depth
-- Responsive border radius
-
-**iOS Glass (.tw-glass-ios):**
-
-- 24px blur + 160% saturation
-- Refined shadow for iOS aesthetic
-- Fine borders for definition
+| # | Section   | Key Features |
+|---|-----------|--------------|
+| 1 | **Hero**      | Animated greeting, giant Bebas title, photo ring with orbit, floating tags, stats counter |
+| 2 | **Services**  | 4-column glass cards with icon hover, top-border reveal |
+| 3 | **About**     | Split layout, experience badge, animated skill bars |
+| 4 | **Portfolio** | 6-card grid with category filter (All / UI / UX / Brand) |
+| 5 | **Contact**   | Split layout, glass form with focus states, submission feedback |
+| 6 | **Footer**    | Logo · copyright · social icons |
 
 ---
 
-## ⌨️ Keyboard Shortcuts
+## 🌗 Theme Toggle
 
-| Shortcut | Action                        |
-| -------- | ----------------------------- |
-| `/`      | Focus search (if implemented) |
-| `Esc`    | Close mobile menu             |
-| `Tab`    | Navigate links                |
+- Toggle button in navbar uses a pill-shaped track with animated thumb
+- Sun/Moon icons fade and scale between states
+- Theme persists via `localStorage` key `portfolio-theme`
+- All 40+ CSS variables update instantly via `data-theme` attribute on `<html>`
 
 ---
 
 ## 📱 Responsive Breakpoints
 
 ```css
-@media (max-width: 1024px) {
-  /* Tablets */
-}
-@media (max-width: 768px) {
-  /* Mobile */
-}
-@media (max-width: 480px) {
-  /* Small phones */
-}
+/* Desktop  */ > 1024px  — 4-col services, 3-col portfolio, side-by-side hero
+/* Tablet   */ ≤ 1024px  — 2-col services, 2-col portfolio
+/* Mobile   */ ≤  768px  — Single column, hamburger menu, hero photo hidden
+/* Small    */ ≤  480px  — Reduced padding throughout
 ```
 
 ---
 
-## 🎯 Performance Optimizations
+## ⚡ Performance Notes
 
-- **Lazy Loading:** Images and resources load on-demand
-- **CSS Variables:** Minimal repaints on theme changes
-- **RequestAnimationFrame:** Smooth 60fps animations
-- **Debounced Scroll Events:** Efficient scroll handling
-- **Optimized Media Queries:** Mobile-first approach
-
----
-
-## 🐛 Known Issues & Roadmap
-
-### Current Limitations
-
-- Custom cursor removed in favor of iOS-like design
-- No dark mode for external badge images (shields.io)
-
-### Planned Features
-
-- [ ] Blog section with markdown support
-- [ ] Project filtering by technology
-- [ ] Search functionality
-- [ ] Comments/feedback system
-- [ ] Dark mode for badges
-- [ ] PWA support
-- [ ] Image optimization
+- Google Fonts loaded with `preconnect` for faster resolution
+- All animations use `transform` and `opacity` (GPU-composited, no layout thrash)
+- `IntersectionObserver` used for lazy-triggering all animations
+- Cursor uses `requestAnimationFrame` for smooth lerp
+- No JavaScript frameworks or heavy libraries
 
 ---
 
-## 🤝 Contributing
+## 🔧 Customization
 
-Contributions, issues, and feature requests are welcome!
+### Swap your photo
 
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feature/AmazingFeature`
-3. Commit changes: `git commit -m 'Add AmazingFeature'`
-4. Push to branch: `git push origin feature/AmazingFeature`
-5. Open a Pull Request
+Replace the SVG placeholder inside `.photo-circle`:
+
+```html
+<img src="your-photo.jpg" alt="Your Name" class="w-full h-full object-cover object-top" />
+```
+
+### Update content
+
+All text is in `index.html`. Search for `Mahmood Fazile` to find name references.
+
+### Change accent color
+
+In `style.css`, update a single variable:
+
+```css
+:root {
+  --accent: #FF781E; /* ← change this */
+}
+```
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see [LICENSE](LICENSE) file for details.
-
-```
-MIT License © 2025 Jahid Ekbal Mallick
-```
+MIT License — free to use, modify, and distribute with attribution.
 
 ---
 
-## 🔗 Links
+<div align="center">
 
-- **Portfolio:** [https://jahid-ekbal.dev](https://jahid-ekbal.dev)
-- **GitHub:** [github.com/jahid-ekbal](https://github.com/jahid-ekbal)
-- **LinkedIn:** [linkedin.com/in/jahid-developer](https://linkedin.com/in/jahid-developer)
-- **Email:** [jahidekbalmallick@gmail.com](mailto:jahidekbalmallick@gmail.com)
+**Crafted with precision · Dark & Light · Glass & Motion**
 
----
+*© 2025 Mahmood Fazile — UI/UX Designer*
 
-## 🙏 Acknowledgments
-
-- **Fonts:** Google Fonts (Syne, JetBrains Mono)
-- **Icons:** Lucide Icons
-- **API:** GitHub REST API
-- **Inspiration:** iOS Design Language, Modern Web Standards
-
----
-
-## 📊 Stats
-
-![Lines of Code](https://img.shields.io/badge/Lines%20of%20Code-5000%2B-blue)
-![CSS Lines](https://img.shields.io/badge/CSS%20Lines-1500%2B-brightgreen)
-![JavaScript Lines](https://img.shields.io/badge/JS%20Lines-500%2B-yellow)
-![Commits](https://img.shields.io/badge/Commits-50%2B-orange)
-
----
-
-## 🎓 Learning Resources Used
-
-- CSS Glassmorphism Design
-- Vanilla JavaScript Event Handling
-- GitHub API Integration
-- Responsive Web Design
-- Web Animation & Transitions
-- localStorage API
-
----
-
-**Made with ❤️ by [Jahid Ekbal Mallick](https://github.com/jahid-ekbal)**
+</div>
